@@ -8,6 +8,11 @@
 /**
  * Implements hook_uninstall().
  */
-function syslog_uninstall() {
-  variable_del('gadget_detector');
+function idMyGadget_uninstall() {
+  // @FIXME
+// // @FIXME
+// // This looks like another module's variable. You'll need to rewrite this call
+// // to ensure that it uses the correct configuration object.
+// variable_del('gadget_detector');
+
 }
