@@ -1,10 +1,10 @@
-# Schema for the configuration files of the StarkIdMyGadget theme.
+# Schema for the configuration files of the idMyGadget theme.
 
-starkIdMyGadget.settings:
-  type: theme_settings
-  label: 'StarkIdMyGadget settings'
+idMyGadget.settings:
+  type: module_settings
+  label: 'IdMyGadget settings'
 
-starIdMyGadget.detector:
+idMyGadget.detector:
   type: config_object
   label: 'Gadget Detector'
   mapping:
