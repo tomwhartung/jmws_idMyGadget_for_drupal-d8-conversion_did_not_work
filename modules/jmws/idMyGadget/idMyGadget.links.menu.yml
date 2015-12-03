@@ -1,5 +1,5 @@
 idMyGadget.config:
-  title: 'idMyGadget configuration'
+  title: 'IdMyGadget configuration'
   description: 'Configure the idMyGadget module'
   route_name: idMyGadget.config
   parent: system.admin_config_system
