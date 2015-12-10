@@ -1,0 +1,3 @@
+'configure_idmygadget':
+  title: 'Configure the idmygadget module'
+  description: 'Configure the device detector used, strings used for headings, etc.'
