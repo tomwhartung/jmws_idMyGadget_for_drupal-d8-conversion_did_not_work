@@ -1,5 +1,5 @@
-idMyGadget.config:
+idmygadget.config:
   title: 'IdMyGadget configuration'
-  description: 'Configure the idMyGadget module'
-  route_name: idMyGadget.config
+  description: 'Configure the idmygadget module: device detector, heading strings, etc.'
+  route_name: idmygadget.config
   parent: system.admin_config_system
