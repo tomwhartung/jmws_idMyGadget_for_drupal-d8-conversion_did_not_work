@@ -1,8 +1,0 @@
-name = IdMyGadget
-description = Performs device detection so we can provide device-specific menus and content.
-package = Jmws
-version = VERSION
-core = 7.x
-files[] = jmws_idMyGadget_for_drupal.test
-configure = admin/config/idmygadget
-
