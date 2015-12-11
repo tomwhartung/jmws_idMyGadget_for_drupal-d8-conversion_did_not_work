@@ -1,17 +1,17 @@
-idMyGadget.hug:
-  path: /idMyGadget/
+idmygadget.hug:
+  path: /idmygadget/
   defaults:
-    _controller: 'Drupal\jmws\idMyGadget\Controller\IdMyGadgetController::config'
+    _controller: 'Drupal\jmws\idmygadget\Controller\IdMyGadgetController::config'
     _title: 'IdMyGadget!'
     count: 0
   requirements:
     _permission: 'access content'
     count: \d+
-idMyGadget.config:
-  path: /admin/config/system/jmws/idMyGadget
+idmygadget.config:
+  path: /admin/config/system/jmws/idmygadget
   defaults:
-    _form: 'Drupal\jmws\idMyGadget\Form\ConfigForm'
+    _form: 'Drupal\jmws\idmygadget\Form\ConfigForm'
     _title: 'IdMyGadget configuration'
   requirements:
-    _permission: 'configure_idMyGadget'
+    _permission: 'configure_idmygadget'
 
