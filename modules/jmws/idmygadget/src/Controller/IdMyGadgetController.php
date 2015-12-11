@@ -14,8 +14,8 @@ class IdMyGadgetController extends ControllerBase {
    */
   protected $gadgetDetector;
 
-  public function __construct(GadgetDetector $detector) {
-    $this->gadgetDetector = $detector;
+  public function __construct(GadgetDetector $gadgetDetector) {
+    $this->gadgetDetector = $gadgetDetector;
   }
 
   public static function create(ContainerInterface $container) {
