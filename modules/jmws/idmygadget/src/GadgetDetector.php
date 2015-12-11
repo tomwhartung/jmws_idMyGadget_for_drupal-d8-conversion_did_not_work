@@ -1,10 +1,10 @@
 <?php
 
-namespace Drupal\hugs;
+namespace Drupal\idmygadget;
 
 use Drupal\Core\State\StateInterface;
 
-class HugTracker {
+class GadgetDetector {
 
   /**
    * @var \Drupal\Core\State\StateInterface
