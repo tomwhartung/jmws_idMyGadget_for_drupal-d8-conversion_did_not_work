@@ -14,4 +14,11 @@ idmygadget.config:
     _title: 'IdMyGadget configuration'
   requirements:
     _permission: 'configure_idmygadget'
+idmygadget.content:
+  path: /hello
+  defaults:
+    _controller: 'Drupal\jmws\idmygadget\Controller\IdMyGadgetController::content'
+    _title: 'IdMyGadget says Haiiii from idmygadget.routing.yml!'
+  requirements:
+    _permission: 'access content'
 
