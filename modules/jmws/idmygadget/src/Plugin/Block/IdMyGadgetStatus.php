@@ -1,39 +1,39 @@
 <?php
 
-namespace Drupal\hugs\Plugin\Block;
+namespace Drupal\idmygadget\Plugin\Block;
 
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
-use Drupal\hugs\HugTracker;
+use Drupal\idmygadget\GadgetDetector;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Reports on hugability status.
  *
  * @Block(
- *   id = "hugs_status",
- *   admin_label = @Translation("Hug status"),
+ *   id = "idmygadget_status",
+ *   admin_label = @Translation("IdMyGadget status"),
  *   category = @Translation("System")
  * )
  */
-class HugStatus extends BlockBase implements ContainerFactoryPluginInterface {
+class IdMyGadgetStatus extends BlockBase implements ContainerFactoryPluginInterface {
 
   /**
-   * @var \Drupal\hugs\HugTracker
+   * @var \Drupal\idmygadget\GadgetDetector
    */
-  protected $hugTracker;
+  protected $gadgetDetector;
 
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, HugTracker $hugTracker) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, GadgetDetector $gadgetDetector) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
-    $this->hugTracker = $hugTracker;
+    $this->gadgetDetector = $gadgetDetector;
   }
 
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
     return new static(
       $configuration, $plugin_id, $plugin_definition,
-      $container->get('hugs.hug_tracker')
+      $container->get('idmygadget.gadget_detector')
     );
   }
 
@@ -44,7 +44,7 @@ class HugStatus extends BlockBase implements ContainerFactoryPluginInterface {
   public function blockForm($form, FormStateInterface $form_state) {
     $form['enabled'] = [
       '#type' => 'checkbox',
-      '#title' => $this->t('Hugging enabled'),
+      '#title' => $this->t('IdMyGadget enabled'),
       '#default_value' => $this->configuration['enabled'],
     ];
 
@@ -58,7 +58,7 @@ class HugStatus extends BlockBase implements ContainerFactoryPluginInterface {
   public function build() {
     if ($this->configuration['enabled']) {
       $message = $this->t('@to was the last person hugged', [
-        '@to' => $this->hugTracker->getLastRecipient()
+        '@to' => $this->gadgetDetector->getLastRecipient()
       ]);
     }
     else {
