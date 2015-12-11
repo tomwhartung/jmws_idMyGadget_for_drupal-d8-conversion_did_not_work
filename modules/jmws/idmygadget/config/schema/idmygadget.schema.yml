@@ -1,23 +1,23 @@
-# Schema for the configuration files of the idMyGadget theme.
+# Schema for the configuration files of the idmygadget module.
 
-idMyGadget.settings:
+idmygadget.settings:
   type: module_settings
   label: 'IdMyGadget settings'
 
-idMyGadget.detector:
+idmygadget.gadget_detector:
   type: config_object
   label: 'Gadget Detector'
   mapping:
-    gadgetdetector:
+    gadget_detector:
       type: string
       label: 'Gadget detector to use'
-    sitenamephone:
+    site_name_phone:
       type: string
       label: ‘Site Name on Phones’
-    sitenametablet:
+    site_name_tablet:
       type: string
       label: ‘Site Name on Tablets’
-    sitenamedesktop:
+    site_name_desktop:
       type: string
       label: ‘Site Name on Desktops’
     langcode:
