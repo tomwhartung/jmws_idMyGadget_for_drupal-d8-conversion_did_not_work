@@ -1,25 +1,25 @@
 <?php
 
-namespace Drupal\hugs\Controller;
+namespace Drupal\idmygadget\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
-use Drupal\hugs\HugTracker;
+use Drupal\idmygadget\GadgetDetector;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\node\NodeInterface;
 
-class HugsController extends ControllerBase {
+class IdMyGadgetController extends ControllerBase {
 
   /**
-   * @var \Drupal\hugs\HugTracker
+   * @var \Drupal\idmygadget\GadgetDetector
    */
-  protected $hugTracker;
+  protected $gadgetDetector;
 
-  public function __construct(HugTracker $tracker) {
-    $this->hugTracker = $tracker;
+  public function __construct(GadgetDetector $detector) {
+    $this->gadgetDetector = $detector;
   }
 
   public static function create(ContainerInterface $container) {
-    return new static($container->get('hugs.hug_tracker'));
+    return new static($container->get('idmygadget.gadget_detector'));
   }
 
   public function nodeHug(NodeInterface $node) {
@@ -50,9 +50,9 @@ class HugsController extends ControllerBase {
   }
 
   public function hug($to, $from, $count) {
-    $this->hugTracker->addHug($to);
+    $this->gadgetDetector->addHug($to);
     if (!$count) {
-      $count = $this->config('hugs.settings')->get('default_count');
+      $count = $this->config('idmygadget.settings')->get('default_count');
     }
     return [
       '#theme' => 'hug_page',
@@ -64,7 +64,7 @@ class HugsController extends ControllerBase {
 
   public function hug3($to, $from, $count) {
     if (!$count) {
-      $count = $this->config('hugs.settings')->get('default_count');
+      $count = $this->config('idmygadget.settings')->get('default_count');
     }
     return [
       '#theme' => 'hug_page',
