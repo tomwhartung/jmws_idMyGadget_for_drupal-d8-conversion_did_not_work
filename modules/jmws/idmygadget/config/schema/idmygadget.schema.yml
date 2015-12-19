@@ -4,22 +4,10 @@ idmygadget.settings:
   type: module_settings
   label: 'IdMyGadget settings'
 
-idmygadget.gadget_detector:
+idmygadget.idmygadget_gadget_detector:
   type: config_object
   label: 'Gadget Detector'
   mapping:
-    gadget_detector:
+    idmygadget_gadget_detector:
       type: string
       label: 'Gadget detector to use'
-    site_name_phone:
-      type: string
-      label: ‘Site Name on Phones’
-    site_name_tablet:
-      type: string
-      label: ‘Site Name on Tablets’
-    site_name_desktop:
-      type: string
-      label: ‘Site Name on Desktops’
-    langcode:
-      type: string
-      label: ‘Language code’

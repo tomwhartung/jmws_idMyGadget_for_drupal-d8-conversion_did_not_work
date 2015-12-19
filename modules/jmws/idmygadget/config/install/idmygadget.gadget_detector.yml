@@ -1,6 +1,2 @@
-gadget_detector: 'detect_mobile_devices'
-site_name_phone: 'Site Name Phone (default)'
-site_name_tablet: 'Site Name Tablet (default)'
-site_name_desktop: 'Site Name Desktop (default)'
+idmygadget_gadget_detector: 'detect_mobile_devices'
 langcode: en
-
