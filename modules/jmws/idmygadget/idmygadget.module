@@ -13,7 +13,7 @@ define( 'IDMYGADGET_MODULE_DIR', __DIR__ . DIRECTORY_SEPARATOR . 'idMyGadget' );
 // require_once( 'idMyGadget/JmwsIdMyGadgetDrupal.php' );
 // require_once 'jmws_idMyGadget_for_joomla/PhoneBurgerMenuIcon.php';
 
-print '<p>Hi from jmws_idMyGadget_for_drupal!!</p>';
+// print '<p>Hi from jmws_idMyGadget_for_drupal!!</p>';
 
 /**
  * Check the idmygadget object, instantiating it if necessary, and check the installation
