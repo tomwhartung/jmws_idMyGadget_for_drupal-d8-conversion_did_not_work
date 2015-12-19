@@ -2,6 +2,4 @@ name: IdMyGadget
 type: module
 description: 'Performs device detection so we can provide device-specific menus and content.'
 package: Jmws
-version: '1.0'
 core: '8.x'
-
