@@ -1,24 +1,24 @@
-idmygadget.hug:
-  path: /idmygadget/
+idmygadget.idmygadget:
+  path: /idmygadget/idmygadget
   defaults:
-    _controller: 'Drupal\jmws\idmygadget\Controller\IdMyGadgetController::config'
+    _controller: 'Drupal\jmws\idmygadget\Controller\IdMyGadgetController::idMyGadget'
     _title: 'IdMyGadget!'
-    count: 0
+    idmygadget_gadget_detector: 'detect_mobile_devices'
   requirements:
     _permission: 'access content'
     count: \d+
 idmygadget.config:
-  path: /admin/config/system/jmws/idmygadget
+  path: /admin/config/system/idmygadget
   defaults:
     _form: 'Drupal\jmws\idmygadget\Form\ConfigForm'
-    _title: 'IdMyGadget configuration'
+    _title: 'IdMyGadget Configuration (_title in idmygadget.routing.yml)'
   requirements:
     _permission: 'configure_idmygadget'
 idmygadget.content:
-  path: /hello
+  path: /idmygadget/content
   defaults:
     _controller: 'Drupal\jmws\idmygadget\Controller\IdMyGadgetController::content'
-    _title: 'IdMyGadget says Haiiii from idmygadget.routing.yml!'
+    _title: 'IdMyGadget Content (_title in idmygadget.routing.yml)'
   requirements:
     _permission: 'access content'
 
