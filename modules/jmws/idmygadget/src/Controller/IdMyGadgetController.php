@@ -25,11 +25,18 @@ class IdMyGadgetController extends ControllerBase {
   public function content() {
     return array(
         '#type' => 'markup',
-        '#markup' => $this->t('Hello, World - from IdMyGadgetController.php!'),
+        '#markup' => $this->t('Hello, World - from IdMyGadgetController.php::content'),
     );
   }
   public static function create(ContainerInterface $container) {
     return new static($container->get('idmygadget.gadget_detector'));
+  }
+
+  public function idMyGadget() {
+    return array(
+        '#type' => 'markup',
+        '#markup' => $this->t('Hello, World - from IdMyGadgetController.php::idMyGadget'),
+    );
   }
 
   public function nodeHug(NodeInterface $node) {
