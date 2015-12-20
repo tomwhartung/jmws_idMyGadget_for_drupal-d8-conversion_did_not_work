@@ -16,11 +16,11 @@ class GadgetDetector {
   }
 
   public function addHug($target_name) {
-    $this->state->set('hugs.last_recipient', $target_name);
+    $this->state->set('idmygadget.last_recipient', $target_name);
     return $this;
   }
 
   public function getLastRecipient() {
-    return $this->state->get('hugs.last_recipient');
+    return $this->state->get('idmygadget.last_recipient');
   }
 }
